@@ -1,0 +1,25 @@
+/* Main Style */
+
+.button {
+    display: inline-block;
+    background-color: #006633;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #004d26;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+

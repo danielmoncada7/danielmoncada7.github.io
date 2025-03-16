@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Out - A Fitness Passion</title>
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff5733;
+            color: white;
+            padding: 15px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        main section {
+            display: none;
+            padding: 20px;
+        }
+        main section:first-child {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('main section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Working Out - A Fitness Passion</h1>
+        <nav>
+            <a onclick="showSection('home')">Home</a> |
+            <a onclick="showSection('about')">About</a> |
+            <a onclick="showSection('best-times')">Best Times</a> |
+            <a onclick="showSection('locations')">Best Locations</a> |
+            <a onclick="showSection('how')">How</a> |
+            <a onclick="showSection('why')">Why</a> |
+            <a onclick="showSection('ai-prompts')">AI Prompts</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>What is Working Out?</h2>
+            <p>Working out is an essential activity for maintaining physical health, building strength, and enhancing endurance.</p>
+            <figure>
+                <img src="images/home-gym.jpg" alt="Home Gym Setup">
+                <figcaption>A well-equipped home gym setup for effective workouts.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="about">
+            <h2>Who Works Out?</h2>
+            <p>Fitness enthusiasts, athletes, and everyday individuals engage in workouts to stay fit and improve overall health.</p>
+            <figure>
+                <img src="images/people-training.jpg" alt="People Training in Gym">
+                <figcaption>People training hard to achieve their fitness goals.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="best-times">
+            <h2>Best Times to Work Out</h2>
+            <p>Experts suggest working out in the morning to boost metabolism, but evenings also provide flexibility.</p>
+            <figure>
+                <img src="images/morning-run.jpg" alt="Morning Run">
+                <figcaption>Running early in the morning for a fresh start.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="locations">
+            <h2>Best Locations to Work Out</h2>
+            <p>Gyms, parks, and home setups are great places to perform effective workouts.</p>
+            <figure>
+                <img src="images/outdoor-workout.jpg" alt="Outdoor Workout">
+                <figcaption>Outdoor workouts provide fresh air and a scenic environment.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="how">
+            <h2>How to Work Out Effectively</h2>
+            <p>Proper planning, routine selection, and consistency are key to effective workouts.</p>
+            <figure>
+                <img src="images/workout-plan.jpg" alt="Workout Plan">
+                <figcaption>A structured workout plan to optimize fitness progress.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="why">
+            <h2>Why Work Out?</h2>
+            <p>Regular workouts enhance health, build muscle, improve endurance, and boost mental well-being.</p>
+            <figure>
+                <img src="images/fit-body.jpg" alt="Fit Body After Consistent Workouts">
+                <figcaption>Consistent exercise leads to a fit and strong body.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="ai-prompts">
+            <h2>AI Prompts</h2>
+            <p>AI was used to generate the images and assist in structuring the content. Below are the prompts used:</p>
+            <ul>
+                <li><em>"Generate a photorealistic image of a home gym setup with modern equipment."</em></li>
+                <li><em>"Create an image of people training in a gym with weights and treadmills."</em></li>
+                <li><em>"Show an early morning run in a scenic park with sunrise lighting."</em></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Designed by <a href="#">Your Design Firm</a></p>
+        <p>
+            <a href="#">HTML Validation</a> | 
+            <a href="#">CSS Validation</a> | 
+            <a href="#">Accessibility Check</a>
+        </p>
+    </footer>
+</body>
+</html>

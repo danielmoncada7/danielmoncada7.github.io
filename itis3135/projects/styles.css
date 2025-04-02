@@ -63,4 +63,22 @@ body {
   
   footer p {
     margin: 0.5em 0;
-  }  
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .gallery figure {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .gallery figcaption {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 8px;
+  }
+  

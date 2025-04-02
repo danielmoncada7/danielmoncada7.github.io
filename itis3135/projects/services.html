@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - D&A Detailing</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+</head>
+<body>
+  <header>
+    <h1>D&A Detailing</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Services</h2>
+    <p>Choose from our detailing packages designed to fit your needs and your ride.</p>
+
+    <div id="servicesAccordion">
+      <h3>Interior Detail</h3>
+      <div>
+        <p>Includes vacuuming, steam cleaning, stain removal, leather conditioning, dashboard and trim polish. Perfect for refreshing your interior.</p>
+        <p><strong>Starting at $85</strong></p>
+      </div>
+
+      <h3>Exterior Detail</h3>
+      <div>
+        <p>Hand wash, clay bar treatment, wax or sealant, tire dressing, and trim restoration. Brings out your vehicle’s original shine.</p>
+        <p><strong>Starting at $75</strong></p>
+      </div>
+
+      <h3>Full Detail Package</h3>
+      <div>
+        <p>Combines both interior and exterior services for the complete D&A treatment. Great for seasonal refreshes or resale prep.</p>
+        <p><strong>Starting at $150</strong></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 D&A Detailing. All rights reserved.</p>
+  </footer>
+
+  <!-- jQuery and jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      $("#servicesAccordion").accordion({
+        collapsible: true,
+        heightStyle: "content"
+      });
+    });
+  </script>
+</body>
+</html>

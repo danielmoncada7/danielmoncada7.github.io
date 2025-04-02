@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - D&A Detailing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>D&A Detailing</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>Use the form below to request a quote or ask a question. </p>
+
+    <form id="contactForm" novalidate>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="formFeedback" style="color: green; margin-top: 10px;"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 D&A Detailing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const feedback = document.getElementById("formFeedback");
+
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      const phonePattern = /^[0-9\\-\\(\\)\\s]+$/;
+
+      if (!name || !email || !phone || !message) {
+        feedback.style.color = "red";
+        feedback.textContent = "Please fill out all fields.";
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        feedback.style.color = "red";
+        feedback.textContent = "Please enter a valid email address.";
+        return;
+      }
+
+      if (!phonePattern.test(phone)) {
+        feedback.style.color = "red";
+        feedback.textContent = "Please enter a valid phone number.";
+        return;
+      }
+
+      feedback.style.color = "green";
+      feedback.textContent = "Message sent! We’ll get back to you shortly.";
+
+      this.reset();
+    });
+  </script>
+</body>
+</html>

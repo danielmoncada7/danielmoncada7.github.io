@@ -14,7 +14,6 @@
 
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
-
   <main>
     <h2>Slideshow Gallery - Danny Moncada</h2>
     <p class="tagline">An image for every letter in my name</p>
@@ -25,24 +24,53 @@
     </div>
 
     <div class="thumbnail-list">
-      <img src="images/drum.jpg" data-caption="D - Drum" />
-      <img src="images/apple.jpg" data-caption="A - Apple" />
-      <img src="images/notebook.jpg" data-caption="N - Notebook" />
-      <img src="images/nachos.jpg" data-caption="N - Nachos" />
-      <img src="images/yoyo.jpg" data-caption="Y - Yo-Yo" />
-      <img src="images/microphone.jpg" data-caption="M - Microphone" />
-      <img src="images/owl.jpg" data-caption="O - Owl" />
-      <img src="images/necklace.jpg" data-caption="N - Necklace" />
-      <img src="images/camera.jpg" data-caption="C - Camera" />
-      <img src="images/anchor.jpg" data-caption="A - Anchor" />
-      <img src="images/donut.jpg" data-caption="D - Donut" />
-      <img src="images/alien.jpg" data-caption="D - Donut" />
-
+      <img src="images/drum.jpg" alt="D - Drum" data-caption="D - Drum" />
+      <img src="images/apple.jpg" alt="A - Apple" data-caption="A - Apple" />
+      <img src="images/notebook.jpg" alt="N - Notebook" data-caption="N - Notebook" />
+      <img src="images/nachos.jpg" alt="N - Nachos" data-caption="N - Nachos" />
+      <img src="images/yoyo.jpg" alt="Y - Yo-Yo" data-caption="Y - Yo-Yo" />
+      <img src="images/microphone.jpg" alt="M - Microphone" data-caption="M - Microphone" />
+      <img src="images/owl.jpg" alt="O - Owl" data-caption="O - Owl" />
+      <img src="images/necklace.jpg" alt="N - Necklace" data-caption="N - Necklace" />
+      <img src="images/camera.jpg" alt="C - Camera" data-caption="C - Camera" />
+      <img src="images/anchor.jpg" alt="A - Anchor" data-caption="A - Anchor" />
+      <img src="images/donut.jpg" alt="D - Donut" data-caption="D - Donut" />
+      <img src="images/alien.jpg" alt="Bonus - Alien" data-caption="Bonus - Alien" />
     </div>
 
+    <section>
+      <h3>AI Prompts Used</h3>
+      <ul>
+        <li>"Landscape photo of a drum set"</li>
+        <li>"An apple on a white background"</li>
+        <li>"A notebook with a pen on a desk"</li>
+        <li>"A plate of nachos in natural light"</li>
+        <li>"A yo-yo toy mid-spin on string"</li>
+        <li>"A podcast-style microphone in studio"</li>
+        <li>"An owl perched on a branch"</li>
+        <li>"A silver necklace on a velvet stand"</li>
+        <li>"A DSLR camera on a wood table"</li>
+        <li>"A heavy anchor on a dock"</li>
+        <li>"A chocolate donut with sprinkles"</li>
+        <li>"An alien creature posing in sci-fi background"</li>
+      </ul>
+      <p><strong>AI Tool:</strong> Bing Image Creator (DALL·E 3)</p>
+    </section>
+
+  </main>
 
   <!-- Dynamic Footer -->
   <footer></footer>
 
+  <script>
+    // Load header and footer
+    fetch("components/header.html")
+      .then((res) => res.text())
+      .then((data) => (document.querySelector("header").innerHTML = data));
+
+    fetch("components/footer.html")
+      .then((res) => res.text())
+      .then((data) => (document.querySelector("footer").innerHTML = data));
+  </script>
 </body>
 </html>

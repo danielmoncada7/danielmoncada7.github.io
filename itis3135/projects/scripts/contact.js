@@ -1,4 +1,3 @@
-// scripts/contact.js
 // Client-side form validation for contact.html
 
 document.addEventListener('DOMContentLoaded', () => {

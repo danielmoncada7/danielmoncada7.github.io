@@ -1,4 +1,3 @@
-// scripts/services.js
 // Initialize the jQuery UI accordion on services.html
 
 $(function() {

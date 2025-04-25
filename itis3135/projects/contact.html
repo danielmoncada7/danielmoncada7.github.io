@@ -20,7 +20,7 @@
 
   <main>
     <h2>Contact Us</h2>
-    <p>Use the form below to request a quote or ask a question. </p>
+    <p>Use the form below to request a quote or ask a question.</p>
 
     <form id="contactForm" novalidate>
       <label for="name">Name:</label><br>
@@ -45,42 +45,7 @@
     <p>&copy; 2025 D&A Detailing. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const message = document.getElementById("message").value.trim();
-      const feedback = document.getElementById("formFeedback");
-
-      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-      const phonePattern = /^[0-9\\-\\(\\)\\s]+$/;
-
-      if (!name || !email || !phone || !message) {
-        feedback.style.color = "red";
-        feedback.textContent = "Please fill out all fields.";
-        return;
-      }
-
-      if (!emailPattern.test(email)) {
-        feedback.style.color = "red";
-        feedback.textContent = "Please enter a valid email address.";
-        return;
-      }
-
-      if (!phonePattern.test(phone)) {
-        feedback.style.color = "red";
-        feedback.textContent = "Please enter a valid phone number.";
-        return;
-      }
-
-      feedback.style.color = "green";
-      feedback.textContent = "Message sent! We’ll get back to you shortly.";
-
-      this.reset();
-    });
-  </script>
+  <!-- external JS -->
+  <script src="scripts/contact.js" defer></script>
 </body>
 </html>

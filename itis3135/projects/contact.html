@@ -5,18 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - D&A Detailing</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="scripts/HTMLInclude.js" defer></script>
+
 </head>
 <body>
-  <header>
-    <h1>D&A Detailing</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <header w3-include-html="components/header.html"></header>
 
   <main>
     <h2>Contact Us</h2>
@@ -41,10 +34,10 @@
     <p id="formFeedback" style="color: green; margin-top: 10px;"></p>
   </main>
 
-  <footer>
-    <p>&copy; 2025 D&A Detailing. All rights reserved.</p>
-  </footer>
+  <footer w3-include-html="components/footer.html"></footer>
 
   <script src="scripts/contact.js" defer></script>
+  <script>includeHTML();</script>
+
 </body>
 </html>

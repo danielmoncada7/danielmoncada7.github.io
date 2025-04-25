@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Summary – D&A Detailing</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="scripts/HTMLInclude.js" defer></script>
+</head>
+<body>
+  <header w3-include-html="components/header.html"></header>
+  <main>
+    <h2>Summary Document</h2>
+
+    <section>
+      <h3>Meeting Specifications</h3>
+      <ul>
+        <li>Consistent header/footer via components (HTMLInclude.js).</li>
+        <li>Three JS interactions:
+          <ul>
+            <li>Contact form validation (custom JS).</li>
+            <li>Services accordion (jQuery UI).</li>
+            <li>Gallery lightbox (Lightbox2).</li>
+          </ul>
+        </li>
+        <li>CRAP principles followed:
+          <ul>
+            <li><strong>Contrast:</strong> Dark header/footer vs. white body.</li>
+            <li><strong>Repetition:</strong> Consistent nav &amp; styles.</li>
+            <li><strong>Alignment:</strong> Centered content, flex gallery.</li>
+            <li><strong>Proximity:</strong> Grouped nav links &amp; form fields.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Peer Feedback &amp; Updates</h3>
+      <ul>
+        <li>“Footer lacked validation links” → Added HTML/CSS/WCAG buttons.</li>
+        <li>“Header repeated in every file” → Refactored into component.</li>
+        <li>“Some JS was inline” → Moved all to external scripts folder.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Stakeholder Needs &amp; Future Plans</h3>
+      <p>
+        This site clearly presents D&amp;A services, portfolio, and contact—
+        exactly what the owners requested. In future, I plan to add dynamic
+        testimonials loaded via AJAX from a JSON file, and scheduling
+        integration so customers can book appointments online.
+      </p>
+    </section>
+  </main>
+  <footer w3-include-html="components/footer.html"></footer>
+  <script>includeHTML();</script>
+</body>
+</html>

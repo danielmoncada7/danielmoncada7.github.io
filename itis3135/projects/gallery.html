@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery - D&A Detailing</title>
+  <title>Gallery – D&A Detailing</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="scripts/HTMLInclude.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <script src="scripts/HTMLInclude.js" defer></script>
 </head>
 <body>
+
+  <!-- shared header -->
   <header w3-include-html="components/header.html"></header>
 
   <main>
@@ -17,26 +19,26 @@
 
     <div class="gallery">
       <figure>
-        <a href="images/interorB&A.jpg" data-lightbox="detailing" data-title="Before & After - Interior">
-          <img src="images/interorB&A.jpg" alt="Interior before and after" width="200" />
+        <a href="images/interorB&amp;A.jpg" data-lightbox="detailing" data-title="Before &amp; After – Interior">
+          <img src="images/interorB&amp;A.jpg" alt="Interior before and after" width="200" />
         </a>
-        <figcaption>Before & After - Interior</figcaption>
+        <figcaption>Before &amp; After – Interior</figcaption>
       </figure>
 
       <figure>
-        <a href="images/exteriorB&A.webp" data-lightbox="detailing" data-title="Before & After - Exterior">
-          <img src="images/exteriorB&A.webp" alt="Exterior before and after" width="200" />
+        <a href="images/exteriorB&amp;A.webp" data-lightbox="detailing" data-title="Before &amp; After – Exterior">
+          <img src="images/exteriorB&amp;A.webp" alt="Exterior before and after" width="200" />
         </a>
-        <figcaption>Before & After - Exterior</figcaption>
+        <figcaption>Before &amp; After – Exterior</figcaption>
       </figure>
     </div>
   </main>
 
+  <!-- shared footer -->
   <footer w3-include-html="components/footer.html"></footer>
-
-  <!-- Lightbox Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  
   <script>includeHTML();</script>
+
+  <!-- Lightbox script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>

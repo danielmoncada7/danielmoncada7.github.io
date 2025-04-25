@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - D&A Detailing</title>
+  <title>Contact Us – D&A Detailing</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="scripts/HTMLInclude.js" defer></script>
-
 </head>
 <body>
+
+  <!-- shared header -->
   <header w3-include-html="components/header.html"></header>
 
   <main>
@@ -31,13 +32,15 @@
       <button type="submit">Submit</button>
     </form>
 
-    <p id="formFeedback" style="color: green; margin-top: 10px;"></p>
+    <p id="formFeedback" style="margin-top:10px;"></p>
   </main>
 
+  <!-- shared footer -->
   <footer w3-include-html="components/footer.html"></footer>
-
-  <script src="scripts/contact.js" defer></script>
   <script>includeHTML();</script>
 
+  <!-- form validation -->
+  <script src="scripts/contact.js" defer></script>
 </body>
 </html>
+

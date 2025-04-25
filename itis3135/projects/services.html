@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services - D&A Detailing</title>
+  <title>Services – D&A Detailing</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="scripts/HTMLInclude.js" defer></script>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  <script src="scripts/HTMLInclude.js" defer></script>
 </head>
 <body>
+
+  <!-- shared header -->
   <header w3-include-html="components/header.html"></header>
 
   <main>
@@ -36,11 +38,14 @@
     </div>
   </main>
 
+  <!-- shared footer -->
   <footer w3-include-html="components/footer.html"></footer>
+  <script>includeHTML();</script>
 
+  <!-- dependencies for accordion -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <script src="scripts/services.js" defer></script>
-  <script>includeHTML();</script>
+
 </body>
 </html>

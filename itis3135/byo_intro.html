@@ -7,7 +7,6 @@
   <script src="scripts/survey.js" defer></script>
 </head>
 <body>
-
   <header id="header"></header>
 
   <main>
@@ -17,7 +16,7 @@
     <form id="introForm">
       <label><strong>Name:</strong> <input type="text" name="name" required></label><br>
       <label><strong>Mascot:</strong> <input type="text" name="mascot" required></label><br>
-      <label><strong>Image Upload (PNG/JPG):</strong> 
+      <label><strong>Image Upload (PNG/JPG):</strong>
         <input type="file" name="image" accept=".png,.jpg,.jpeg" required>
       </label><br>
       <label><strong>Image Caption:</strong> <input type="text" name="caption" required></label><br>
@@ -30,7 +29,7 @@
 
       <div id="courses">
         <label><strong>Courses Currently Taking:</strong></label>
-        <button type="button" onclick="addCourse()">Add Course</button>
+        <button type="button" id="addCourseButton">Add Course</button>
       </div><br>
 
       <label><strong>Funny Thing?</strong> <input type="text" name="funny"></label><br>
@@ -38,7 +37,7 @@
 
       <label>
         <input type="checkbox" name="agree" required>
-        I understand this page is public and contains no private info.
+        I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
       </label><br><br>
 
       <input type="submit" value="Submit">
@@ -51,13 +50,22 @@
   <footer id="footer"></footer>
 
   <script>
-    fetch("components/header.html")
+    fetch('components/header.html')
       .then(r => r.text())
-      .then(html => document.getElementById("header").innerHTML = html);
+      .then(html => document.getElementById('header').innerHTML = html);
 
-    fetch("components/footer.html")
+    fetch('components/footer.html')
       .then(r => r.text())
-      .then(html => document.getElementById("footer").innerHTML = html);
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+        const vals = document.createElement('p');
+        vals.innerHTML = `
+          <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validator</a> |
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validator</a> |
+          <a href="https://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance" target="_blank" rel="noopener">WCAG Validator</a>
+        `;
+        document.getElementById('footer').appendChild(vals);
+      });
   </script>
 </body>
 </html>

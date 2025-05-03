@@ -1,17 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('introForm');
     const resultContainer = document.getElementById('resultContainer');
+    const coursesDiv = document.getElementById('courses');
+    const addBtn = document.getElementById('addCourseButton');
+  
+    addBtn.addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.name = 'course';
+      input.required = true;
+      input.placeholder = 'e.g., MATH 2164 - Linear Algebra';
+      coursesDiv.appendChild(input);
+    });
   
     form.addEventListener('submit', e => {
       e.preventDefault();
-  
-      // Gather all values
       const data = new FormData(form);
+  
       const name         = data.get('name');
       const mascot       = data.get('mascot');
-      const fileInput    = form.querySelector('input[name="image"]');
-      const imageFile    = fileInput.files[0];
-      const caption      = data.get('caption');
       const personal     = data.get('personal');
       const professional = data.get('professional');
       const academic     = data.get('academic');
@@ -20,28 +27,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const funny        = data.get('funny');
       const other        = data.get('other');
   
-      
-      const courseInputs = [...document.querySelectorAll('#courses input[name="course"]')];
-      const courses = courseInputs.map(i => i.value.trim()).filter(v => v);
+      const courseInputs = document.querySelectorAll('#courses input[name="course"]');
+      const courses = Array.from(courseInputs)
+                           .map(i => i.value.trim())
+                           .filter(v => v);
   
-      
-      let html = '';
+      // Image
+      const fileInput = form.querySelector('input[name="image"]');
+      const imageFile = fileInput.files[0];
+      const caption   = data.get('caption');
   
-      // Basic info
-      html += '<ul>';
+      // Build HTML
+      let html = '<ul>';
       html += `<li><strong>Name:</strong> ${name}</li>`;
       html += `<li><strong>Mascot:</strong> ${mascot}</li>`;
       html += '</ul>';
   
-      
       if (imageFile) {
         const imgURL = URL.createObjectURL(imageFile);
-        html += `
-          <figure>
-            <img src="${imgURL}" alt="${caption}" />
-            <figcaption>${caption}</figcaption>
-          </figure>
-        `;
+        html += `<figure><img src="${imgURL}" alt="${caption}"><figcaption>${caption}</figcaption></figure>`;
       }
   
       html += '<ul>';
@@ -53,9 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (courses.length) {
         html += '<li><strong>Courses Currently Taking:</strong><ul>';
-        courses.forEach(c => {
-          html += `<li>${c}</li>`;
-        });
+        courses.forEach(c => html += `<li>${c}</li>`);
         html += '</ul></li>';
       }
   

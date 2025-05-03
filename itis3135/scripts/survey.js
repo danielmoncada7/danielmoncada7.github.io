@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.type = 'text';
       input.name = 'course';
       input.required = true;
-      input.placeholder = 'e.g., MATH 2164 - Linear Algebra';
+      input.placeholder = 'e.g., MATH 2164';
       coursesDiv.appendChild(input);
     });
   

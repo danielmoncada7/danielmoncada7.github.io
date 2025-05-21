@@ -1,88 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Webpage | UNC Charlotte</title>
-    <style>
-        body {
-            background-color: #FFFFFF;
-            color: #333333;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        #page-wrapper {
-            margin: auto;
-            padding: 20px;
-        }
-        #logo-wrapper {
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 1px solid #006633;
-        }
-        #content-wrapper {
-            text-align: center;
-        }
-        a {
-            color: #006633;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            border-top: 1px solid #006633;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-        footer a {
-            font-weight: normal;
-        }
-    </style>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="scripts/HTMLInclude.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daniel Moncada | Personal Webpage</title>
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <style>
+    :root {
+      --primary-color: #006633;
+      --light-gray: #f4f4f4;
+      --text-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    #logo-wrapper {
+      margin-top: 10px;
+    }
+
+    #content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin: 20px auto;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .button-link:hover {
+      background: #004d26;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 10px 15px;
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #004d26;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: white;
+      padding: 20px 10px;
+      border-top: 1px solid var(--primary-color);
+      font-size: 0.9rem;
+      text-align: center;
+      color: #555;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-    <div id="page-wrapper">
-        <div id="logo-wrapper">
-            <a href="https://www.uncc.edu">
-                <img src="logo.png" alt="UNC Charlotte Logo" width="200">
-            </a>
-        </div>
-
-        <div id="content-wrapper">
-            <h1>Welcome to My Personal Webpage</h1>
-            <p>Explore my projects and interests.</p>
-            
-            <p>
-                <a href="itis3135/" class="button">Go to ITIS3135 Site</a>
-            </p>
-        
-            <div class="social-links">
-                <p>Connect with me:</p>
-                <p><a href="https://www.linkedin.com/in/danny-moncada-ba45a02b6" target="_blank">LinkedIn</a></p>
-                <p><a href="https://github.com/danielmoncada7/danielmoncada7.github.io" target="_blank">GitHub</a></p>
-            </div>
-        </div>
+  <header>
+    <div id="logo-wrapper">
+      <a href="https://www.uncc.edu" target="_blank">
+        <img src="logo.png" alt="UNC Charlotte Logo" width="150" />
+      </a>
     </div>
+    <h1>Daniel Moncada</h1>
+    <p>Welcome to My Personal Webpage — Explore My Projects & Interests</p>
+  </header>
 
-    <footer>
-      <p>
-        Page built by <strong>Moncada Web Solutions</strong>, 
-        <a href="https://www.freecodecamp.org/certification/dannymoncada/javascript-algorithms-and-data-structures-v8"
-           target="_blank"
-           rel="noopener">
-          Certified in JavaScript Algorithms &amp; Data Structures
-        </a>
-        &copy; 2025
-      </p>
-    </footer>
+  <main id="content">
+    <a class="button-link" href="itis3135/">Visit My ITIS3135 Site</a>
+    
+    <div class="social-links">
+      <p>Connect with me:</p>
+      <a href="https://www.linkedin.com/in/danny-moncada-ba45a02b6" target="_blank">LinkedIn</a>
+      <a href="https://github.com/danielmoncada7/danielmoncada7.github.io" target="_blank">GitHub</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Page built by <strong>Moncada Web Solutions</strong> |
+      <a href="https://www.freecodecamp.org/certification/dannymoncada/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noopener">
+        JavaScript Certified Developer
+      </a>
+      © 2025
+    </p>
+  </footer>
 
 </body>
 </html>

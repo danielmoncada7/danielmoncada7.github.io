@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Craigslist Redesign Case Study | Danny Moncada</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    :root {
+      --primary-color: #006633;
+      --dark-green: #004d26;
+      --light-gray: #f4f4f4;
+      --white: #ffffff;
+      --text-color: #333333;
+      --muted: #666666;
+      --border: #d9d9d9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 14px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      color: var(--dark-green);
+      margin: 18px 0 8px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 10px;
+    }
+
+    .button-link {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 14px;
+    }
+
+    .button-link:hover {
+      background: var(--dark-green);
+    }
+
+    .meta-grid, .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .meta-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      background: #fafafa;
+    }
+
+    .meta-card strong {
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    figure {
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fafafa;
+    }
+
+    figure img {
+      width: 100%;
+      display: block;
+    }
+
+    figcaption {
+      padding: 12px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .placeholder {
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 10px, #eeeeee 10px, #eeeeee 20px);
+      padding: 20px;
+    }
+
+    footer {
+      background: white;
+      padding: 20px 10px;
+      border-top: 1px solid var(--primary-color);
+      font-size: 0.9rem;
+      text-align: center;
+      color: #555;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    @media (max-width: 650px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Craigslist Redesign Case Study</h1>
+    <p>A responsive redesign focused on making browsing, searching, posting, and basic navigation easier for everyday users.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#problem">Problem</a>
+    <a href="#process">Process</a>
+    <a href="#testing">Testing</a>
+    <a href="#final-product">Final Product</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Project Overview</h2>
+      <p>
+        For this team project, we redesigned a Craigslist-style website to make the experience feel more modern, easier to navigate, and more usable across screen sizes. My work focused on front-end implementation and improving the posting/search experience through cleaner page structure, reusable header behavior, form validation, responsive styling, and interactive feedback.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <strong>Role</strong>
+          Front-end development, form behavior, responsive layout, testing support
+        </div>
+        <div class="meta-card">
+          <strong>Tools</strong>
+          HTML, CSS, JavaScript, VS Code, GitHub, GitHub Pages
+        </div>
+        <div class="meta-card">
+          <strong>Team Site</strong>
+          <a href="https://spartinqwerty.github.io/4390-Craigslist/" target="_blank" rel="noopener">View live redesign</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <h2>Problem</h2>
+      <p>
+        Craigslist is useful because it gives users quick access to local listings, but the experience can feel visually outdated and harder to use on modern devices. The main design gap our team addressed was how users browse categories, search for listings, and create new posts without feeling lost. A user should be able to quickly understand where to go, what action to take next, and whether their input is working.
+      </p>
+      <p>
+        The redesign focused on improving clarity, responsiveness, and interaction feedback. This mattered because users may be browsing quickly on mobile, posting from a laptop, or switching between sections like housing, jobs, services, and for-sale listings.
+      </p>
+    </section>
+
+    <section id="original-design">
+      <h2>Original Design Critique</h2>
+      <p>
+        Before redesigning, we looked at the original Craigslist experience and identified areas that could be improved without removing the simplicity that makes the site familiar.
+      </p>
+      <ul>
+        <li>The layout felt text-heavy and did not clearly guide users toward primary actions.</li>
+        <li>Navigation was functional, but it could be easier to scan and use on smaller screens.</li>
+        <li>Posting a new listing needed clearer input expectations and validation feedback.</li>
+        <li>The interface needed stronger visual hierarchy so users could tell which content was most important.</li>
+      </ul>
+
+      <figure>
+  <img src="original-craigslist.png" alt="Original Craigslist homepage design" class="case-study-img">
+  <figcaption>Original Craigslist homepage.</figcaption>
+</figure>
+    </section>
+
+    <section id="process">
+      <h2>Design and Development Process</h2>
+      <h3>1. Planning the main user flows</h3>
+      <p>
+        Our team broke the redesign into core flows: browsing categories, searching, viewing activity, changing location, and creating a new post. This helped us make sure the interface supported the main actions users expect from a Craigslist-style site.
+      </p>
+
+      <h3>2. Building a reusable header</h3>
+      <p>
+        I worked with a reusable header structure so the navigation, location selector, search bar, and theme behavior could stay consistent across pages. This made the site easier to maintain and helped the project feel more unified.
+      </p>
+
+      <h3>3. Improving the new post flow</h3>
+      <p>
+        I worked on the new post page and JavaScript behavior so the form felt more interactive. The goal was to help users complete a post with clearer fields, basic validation, and feedback instead of feeling like they were submitting into a blank page.
+      </p>
+
+      <h3>4. Adding responsive and interactive details</h3>
+      <p>
+        The redesign included responsive styling, a mobile-friendly navigation experience, hover feedback, search suggestions, dark mode support, and saved preferences through local storage. These details helped the prototype feel closer to a real site instead of a static mockup.
+      </p>
+
+      <div class="image-grid">
+        <figure>
+          <img src="early_wireframe.png" alt="Early wireframe for the Craigslist redesign" class="case-study-img">
+          <figcaption>Early layout planning focused on making the main actions easier to find.</figcaption>
+        </figure>
+        <figure>
+          <img src="newpostpage.png" alt="New Post Page" class="case-study-img">
+          <figcaption>The posting flow was improved with clearer form structure and validation behavior.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>Key Design Decisions</h2>
+      <ul>
+        <li><strong>Simple navigation:</strong> We kept categories visible so users could quickly jump to the area they wanted.</li>
+        <li><strong>Responsive layout:</strong> The site was designed to work on both mobile and desktop because users may browse listings from different devices.</li>
+        <li><strong>Interactive feedback:</strong> Search suggestions, hover states, and form messages helped users understand that the interface was responding.</li>
+        <li><strong>Consistent styling:</strong> Reusing colors, spacing, and header behavior made the pages feel like one connected product.</li>
+      </ul>
+    </section>
+
+    <section id="testing">
+      <h2>Testing and Feedback</h2>
+      <p>
+        We tested the redesign by opening the site locally and through GitHub Pages, checking whether navigation links worked, whether pages loaded correctly, and whether the interface still made sense on different screen sizes. We also used peer feedback to identify rough spots in the flow.
+      </p>
+      <p>
+        One issue found during testing was that some interactive pieces worked locally but needed to be checked again after deployment. This helped us focus on testing the live version, not just the VS Code version. Another area we improved was making sure the new post page had clearer input behavior and that the shared header remained consistent across pages.
+      </p>
+      <ul>
+        <li>Checked that navigation links moved users to the correct pages.</li>
+        <li>Tested search suggestion behavior with matching and non-matching input.</li>
+        <li>Reviewed the new post form for missing or unclear fields.</li>
+        <li>Confirmed that the deployed GitHub Pages version loaded publicly.</li>
+      </ul>
+
+      <figure>
+        <img src="findings.png" alt="Findings Summary" class="case-study-img">
+        <figcaption>Testing helped confirm what worked and what needed small fixes before the final version.</figcaption>
+      </figure>
+    </section>
+
+    <section id="final-product">
+      <h2>Final Product</h2>
+      <p>
+        The final redesign is a live Craigslist-style website with clearer navigation, a cleaner layout, responsive behavior, and interactive elements that support browsing and posting. Compared to the original experience, the redesign gives users more visual structure and clearer feedback while keeping the site simple and familiar.
+      </p>
+      <a class="button-link" href="https://spartinqwerty.github.io/4390-Craigslist/" target="_blank" rel="noopener">View Final Live Site</a>
+    </section>
+
+    <section id="reflection">
+      <h2>Reflection</h2>
+      <p>
+        This project helped me practice turning a critique into actual design and code decisions. I learned that a redesign is not just about making a page look newer. It also has to make the user's next step easier to understand. Working with HTML, CSS, JavaScript, GitHub, and GitHub Pages also helped me practice front-end implementation, deployment, and team coordination.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Page built by <strong>Moncada Web Solutions</strong> | <a href="index.html">Back to Portfolio</a></p>
+  </footer>
+</body>
+</html>
